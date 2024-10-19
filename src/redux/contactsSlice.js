@@ -20,9 +20,9 @@ const contactsSlice = createSlice({
         state.loading = false;
         state.items = payload;
       })
-      .addCase(fetchContacts.rejected, (state, { error }) => {
+      .addCase(fetchContacts.rejected, (state, { payload }) => {
         state.loading = false;
-        state.error = error.message;
+        state.error = payload;
       })
 
       .addCase(addContact.pending, state => {
@@ -33,9 +33,9 @@ const contactsSlice = createSlice({
         state.loading = false;
         state.items.push(payload);
       })
-      .addCase(addContact.rejected, (state, { error }) => {
+      .addCase(addContact.rejected, (state, { payload }) => {
         state.loading = false;
-        state.error = error.message;
+        state.error = payload;
       })
 
       .addCase(deleteContact.pending, state => {
@@ -46,9 +46,9 @@ const contactsSlice = createSlice({
         state.loading = false;
         state.items = state.items.filter(item => item.id !== payload.id);
       })
-      .addCase(deleteContact.rejected, (state, { error }) => {
+      .addCase(deleteContact.rejected, (state, { payload }) => {
         state.loading = false;
-        state.error = error.message;
+        state.error = payload;
       });
   },
 });
