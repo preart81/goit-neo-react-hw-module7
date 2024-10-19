@@ -55,3 +55,7 @@ const contactsSlice = createSlice({
 
 export const contactsReducer = contactsSlice.reducer;
 export const selectContacts = state => state.contacts.items;
+// todo Мемоізація селекторів
+// export const selectFilteredContacts = createSelector(
+
+// )
