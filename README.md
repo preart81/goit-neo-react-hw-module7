@@ -1,1 +1,1 @@
-# 14. Asynchronous Redux and memorisation.
+# 14. Asynchronous Redux and memoisation.

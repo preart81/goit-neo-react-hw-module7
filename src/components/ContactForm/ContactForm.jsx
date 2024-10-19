@@ -1,4 +1,3 @@
-import { nanoid } from '@reduxjs/toolkit';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useId } from 'react';
 import { useDispatch } from 'react-redux';
@@ -31,7 +30,6 @@ const ContactForm = () => {
 
   const handleSubmit = (values, { resetForm }) => {
     const newContact = {
-      id: nanoid(),
       name: values.name,
       number: values.number,
     };
